@@ -542,7 +542,9 @@ endif
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    libwifi-hal \
     wificond \
     libwpa_client \
     WifiOverlay
@@ -898,3 +900,8 @@ include hardware/google/pixel/thermal/device.mk
 
 # power HAL
 -include hardware/google/pixel/power-libperfmgr/aidl/device.mk
+
+# Utilities
+PRODUCT_PACKAGES += \
+    libjson \
+    libtinyxml
